@@ -16,7 +16,7 @@ requires "nwnt >= 1.3.3"
 requires "blarg >= 0.1.0"
 
 when NimMajor == 2:
-  requires "glob#head"
+  requires "glob == 0.9.1"
   requires "checksums"
 else:
   requires "glob >= 0.11.1"
