@@ -1,5 +1,14 @@
 # nasher changelog
 
+## 1.1.2: September 18, 2025
+
+Fixed compilation issues due to mis-matched dependencies
+([#124](https://github.com/squattingmonk/nasher/issues/124)).
+
+---
+
+Details: <https://github.com/squattingmonk/nasher/compare/1.1.1...1.1.2>
+
 ## 1.1.1: October 4, 2024
 
 ### Fix freezing when running launch commands with 1.88 preview
@@ -11,8 +20,7 @@ to freeze. These commands now display these messages, just as when running
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/1.1.0...1.1.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/1.1.0...1.1.1>
 
 ## 1.1.0: March 30, 2024
 
@@ -42,21 +50,19 @@ silently.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/1.0.0...1.1.0
-
-
+Details: <https://github.com/squattingmonk/nasher/compare/1.0.0...1.1.0>
 
 ## 1.0.0: March 15, 2024
 
 ### BREAKING CHANGE: use `nwn_script_comp` as the default script compiler
+
 neverwinter.nim's `nwn_script_comp` is now the default script compiler. Users
 who want to continue using nwnsc must set the `nssCompiler` and `nssFlags`
 configuration values as noted in the [readme](README.md).
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.22.0...1.0.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.22.0...1.0.0>
 
 ## 0.22.0: March 3, 2024
 
@@ -73,9 +79,10 @@ them every time.
 
 The unpack operation now supports the `--onMultipleSources` flag just like the
 pack operation. The options are:
-  - `choose`: manually choose the file to update (this is the default)
-  - `default`: automatically accept the first file found
-  - `error`: fail if multiple source files are found
+
+- `choose`: manually choose the file to update (this is the default)
+- `default`: automatically accept the first file found
+- `error`: fail if multiple source files are found
 
 ### Bug fixes
 
@@ -85,8 +92,7 @@ pack operation. The options are:
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.21.0...0.22.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.21.0...0.22.0>
 
 ## 0.21.0: September 2, 2023
 
@@ -97,8 +103,7 @@ Details: https://github.com/squattingmonk/nasher/compare/0.21.0...0.22.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.20.2...0.21.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.20.2...0.21.0>
 
 ## 0.20.2: August 2, 2023
 
@@ -107,8 +112,7 @@ Details: https://github.com/squattingmonk/nasher/compare/0.20.2...0.21.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.20.1...0.20.2
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.20.1...0.20.2>
 
 ## 0.20.1: July 8, 2023
 
@@ -117,12 +121,11 @@ Details: https://github.com/squattingmonk/nasher/compare/0.20.1...0.20.2
 Previously, fields inherited from other targets would have their variables
 resolved before inheritance, preventing the child target from supplying their
 own values for the variable. This update causes all targets to have the
-variables resolved after `nasher.cfg `is fully parsed.
+variables resolved after `nasher.cfg`is fully parsed.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.20.0...0.20.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.20.0...0.20.1>
 
 ## 0.20.0: January 3, 2023
 
@@ -154,6 +157,7 @@ Inheritance works the same as with inheriting package-level keys: missing keys
 will be copied from the parent; existing keys will not.
 
 Some restrictions:
+
 1. The keyword can only be specified at the target level.
 2. The parent target must be declared before the child target.
 
@@ -236,6 +240,7 @@ description = "A demo module without nwnx"
 ```
 
 ### Skip packing if source files are unchanged
+
 ([#103](https://github.com/squattingmonk/nasher/pull/103))
 
 By default, the `pack`, `install`, `serve`, `play`, and `test` commnads will now
@@ -260,12 +265,12 @@ config packUnchanged true`.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.19.0...0.20.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.19.0...0.20.0>
 
 ## 0.19.0: August 19, 2022
 
 ### Added ability to set module description for module targets
+
 ([#102](https://github.com/squattingmonk/nasher/pull/102))
 
 The `modDescription` field is available in the `[target]` section of
@@ -276,8 +281,7 @@ Thanks, @tinygiant98!
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.18.2...0.19.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.18.2...0.19.0>
 
 ## 0.18.2: June 22, 2022
 
@@ -286,8 +290,7 @@ directory rather than the target's cache directory.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.18.1...0.18.2
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.18.1...0.18.2>
 
 ## 0.18.1: June 5, 2022
 
@@ -299,8 +302,7 @@ it to always use the default target.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.18.0...0.18.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.18.0...0.18.1>
 
 ## 0.18.0: June 3, 2022
 
@@ -473,8 +475,7 @@ groups.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.17.4...0.18.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.17.4...0.18.0>
 
 ## 0.17.4: May 12, 2022
 
@@ -485,8 +486,7 @@ will show a stack trace.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.17.3...0.17.4
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.17.3...0.17.4>
 
 ## 0.17.3: May 6, 2022
 
@@ -495,8 +495,7 @@ Details: https://github.com/squattingmonk/nasher/compare/0.17.3...0.17.4
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.17.2...0.17.3
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.17.2...0.17.3>
 
 ## 0.17.2: April 21, 2022
 
@@ -508,7 +507,7 @@ Details: https://github.com/squattingmonk/nasher/compare/0.17.2...0.17.3
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.17.1...0.17.2
+Details: <https://github.com/squattingmonk/nasher/compare/0.17.1...0.17.2>
 
 ## 0.17.1: April 18, 2022
 
@@ -519,8 +518,7 @@ explicitly pass a value: `--abortOnCompileError=false`.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.17.0...0.17.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.17.0...0.17.1>
 
 ## 0.17.0: April 18, 2022
 
@@ -562,8 +560,7 @@ having to build and check the cache.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.16.3...0.17.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.16.3...0.17.0>
 
 ## 0.16.3: January 01, 2022
 
@@ -573,17 +570,15 @@ throw an exception. ([#91](https://github.com/squattingmonk/nasher/issues/91))
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.16.2...0.16.3
+Details: <https://github.com/squattingmonk/nasher/compare/0.16.2...0.16.3>
 
-
-## 0.16.2:
+## 0.16.2
 
 - json output no longer uses carriage returns at line endings
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.16.1...0.16.2
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.16.1...0.16.2>
 
 ## 0.16.1: December 18, 2021
 
@@ -592,8 +587,7 @@ Details: https://github.com/squattingmonk/nasher/compare/0.16.1...0.16.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.16.0...0.16.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.16.0...0.16.1>
 
 ## 0.16.0: October 24, 2021
 
@@ -614,8 +608,7 @@ found.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.15.3...0.16.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.15.3...0.16.0>
 
 ## 0.15.3: October 15, 2021
 
@@ -624,8 +617,7 @@ Steam or GOG install. ([#87](https://github.com/squattingmonk/nasher/issues/87))
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.15.2...0.15.3
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.15.2...0.15.3>
 
 ## 0.15.2: September 26, 2021
 
@@ -634,8 +626,7 @@ Fixed an issue that prevented nasher from reading the `modName` and
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.15.1...0.15.2
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.15.1...0.15.2>
 
 ## 0.15.1: June 25, 2021
 
@@ -650,12 +641,12 @@ Details: https://github.com/squattingmonk/nasher/compare/0.15.1...0.15.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.15.0...0.15.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.15.0...0.15.1>
 
 ## 0.15.0: June 23, 2021
 
 ### Support for Beamdog and GOG installs
+
 ([#65](https://github.com/squattingmonk/nasher/pull/65))
 
 nasher should now work without without additional configuration for those who
@@ -680,6 +671,7 @@ it will fall back to `~/Documents/Neverwinter Nights` or
 `~/.local/share/Neverwinter Nights`, depending on the OS.
 
 ### `gffFlags` support re-enabled
+
 ([#75](https://github.com/squattingmonk/nasher/issues/75))
 
 nasher returned to calling the `nwn_gff` binary when converting to and from
@@ -693,6 +685,7 @@ rather than just `--key:value` and `--key=value`. The old way still works, but
 this will be more familiar to terminal users.
 
 ### Executable scripts now checked after compilation
+
 ([#81](https://github.com/squattingmonk/nasher/pull/81))
 
 Added a warning if compilation of an executable script does not yield a
@@ -700,6 +693,7 @@ matching `.ncs` file, This helps to prevent nasher from reporting successful
 compilation in case of an uncaught nwnsc error. Thanks, @tinygiant98!
 
 ### Fixed duplicate choices in source list
+
 ([#79](https://github.com/squattingmonk/nasher/issues/79))
 
 nasher no longer asks the user to choose a file when multiple targets match the
@@ -707,8 +701,7 @@ same file.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.14.2...0.15.0
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.14.2...0.15.0>
 
 ## 0.14.2: December 29, 2020
 
@@ -718,8 +711,7 @@ the toolset.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.14.1...0.14.2
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.14.1...0.14.2>
 
 ## 0.14.1: December 21, 2020
 
@@ -727,12 +719,12 @@ Increased the required nim version to 1.4.0 to avoid conflict with nwnt.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher/compare/0.14.0...0.14.1
-
+Details: <https://github.com/squattingmonk/nasher/compare/0.14.0...0.14.1>
 
 ## 0.14.0: December 20, 2020
 
 ### Support for git branch-based workflow
+
 ([#54](https://github.com/squattingmonk/nasher.nim/pull/54))
 
 You can now specify a git branch to use when packing or unpacking a target. You
@@ -746,6 +738,7 @@ overrides any setting in `nasher.cfg`.
 Thanks to @tinygiant98 for his hard work on this feature.
 
 ### Support for NWNT format
+
 ([#60](https://github.com/squattingmonk/nasher.nim/pull/60))
 
 Nasher now supports the [nwnt](https://github.com/WilliamDraco/nwnt) file
@@ -762,11 +755,12 @@ Thanks to @WilliamDraco for his hard work on this feature.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.13.0...0.14.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.13.0...0.14.0>
 
 ## 0.13.0: November 07, 2020
 
 ### Display an error message when a resource filename is > 16 characters
+
 ([#59](https://github.com/squattingmonk/nasher.nim/issues/59))
 
 When a file being packed into a module, erf, or hak is > 16 characters long
@@ -774,6 +768,7 @@ When a file being packed into a module, erf, or hak is > 16 characters long
 the user wants to continue packing.
 
 ### Ask which file to pack when mulitple copies exist
+
 ([#58](https://github.com/squattingmonk/nasher.nim/issues/58))
 
 When the `convert` command finds multiple versions of the same source file
@@ -787,6 +782,7 @@ differences between the two. The converted file will still be lowercase, so the
 user must choose which file to use in this case.
 
 ### Other fixes
+
 - Passing relative paths to the `-nssCompiler`, `--gffUtil`, `--tlkUtil`, and
   `--erfUtil` flags now works correctly
   ([#55](https://github.com/squattingmonk/nasher.nim/issues/55))
@@ -808,8 +804,7 @@ user must choose which file to use in this case.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.12.3...0.13.0
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.12.3...0.13.0>
 
 ## 0.12.3: October 21, 2020
 
@@ -819,12 +814,12 @@ upstream issues are resolved.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.12.2...0.12.3
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.12.2...0.12.3>
 
 ## 0.12.2: October 20, 2020
 
 ### Use copy of cache directory to filter and pack
+
 ([#52](https://github.com/squattingmonk/nasher.nim/issues/52))
 
 This fixes an issue caused by filtered files being removed from the cache
@@ -834,8 +829,7 @@ place.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.12.1...0.12.2
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.12.1...0.12.2>
 
 ## 0.12.1: October 20, 2020
 
@@ -844,12 +838,12 @@ overwhelmed the output on large modules.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.12.0...0.12.1
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.12.0...0.12.1>
 
 ## 0.12.0: October 20, 2020
 
 ### Include directives and exec functions comments now ignored
+
 ([#48](https://github.com/squattingmonk/nasher.nim/issues/48))
 
 Previously, include scripts that had executable functions inside of multi-line
@@ -860,6 +854,7 @@ This also fixes a related error, where include directives inside
 multi-line comments were erroneously detected.
 
 ### Add module name/version functionality
+
 ([#51](https://github.com/squattingmonk/nasher.nim/pull/51))
 
 Thanks to tinygiant98 for this update. This update adds the ability to set a
@@ -874,12 +869,12 @@ option will override any setting in the `nasher.cfg`.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.9...0.12.0
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.9...0.12.0>
 
 ## 0.11.9: September 26, 2020
 
 ### Allow `install` and launch commands to work with docker
+
 ([#44](https://github.com/squattingmonk/nasher.nim/pull/44))
 Added dummy folders to the docker volume to prevent permission issues when
 trying to access the installation directory. This fixes
@@ -893,23 +888,25 @@ docker run --rm -it -v ${pwd}:/nasher \
 ```
 
 ### Force "Bearing" on 180 degrees to be positive
+
 ([#41](https://github.com/squattingmonk/nasher.nim/issues/41))
 This prevents additional diffs between +PI and -PI that refer to the same
 bearing. This issue was fixed in a recent NWN:EE patch, but may be useful to
 those running 1.69.
 
 ### Other fixes
+
 - `.ndb` files are no longer deleted from the cache after compilation
 - Improved error messages when converting between GFF and JSON fails
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.8...0.11.9
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.8...0.11.9>
 
 ## 0.11.8: June 21, 2020
 
 ### Added option to compile single files
+
 ([#35](https://github.com/squattingmonk/nasher.nim/issues/35))
 
 This update allows the `compile` command to specify a single script to compile
@@ -939,7 +936,7 @@ the your shell's tab-completion.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.7...0.11.8
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.7...0.11.8>
 
 ## 0.11.7: June 05, 2020
 
@@ -948,11 +945,12 @@ Fixes scripts always being recompiled
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.6...0.11.7
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.6...0.11.7>
 
 ## 0.11.6: May 31, 2020
 
 ### Allowed packing file to subdirectory
+
 [(#23)](https://github.com/squattingmonk/nasher.nim/issues/23)
 
 The user can now include path information in the file section of a
@@ -1002,19 +1000,21 @@ Note that the unpack rules are only used if the file cannot be found
 among the target's sources.
 
 ### Truncate floats when unpacking gff files
+
 [(#32)](https://github.com/squattingmonk/nasher.nim/issues/32)
 
 You can use the `--truncateFloats` flag to set how many decimal places to
 truncate floats to (default is `4`).
 
 ### Minor fixes
+
 - Hyphens are now allowed in target names
 - nasher now uses a manifest to track files that need to be reconverted in the
   cache, fixing [#20](https://github.com/squattingmonk/nasher.nim/issues/20).
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.4...0.11.6
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.4...0.11.6>
 
 ## 0.11.5: May 20, 2020
 
@@ -1024,25 +1024,28 @@ with the new `--truncateFloats` flag; its default value is `4`.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.4...0.11.5
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.4...0.11.5>
 
 ## 0.11.4: May 16, 2020
 
 ### Support unpacking from directories (#24)
+
 You can now pass a directory to the unpack command just as you would a file.
 
 ### Process scripts in chunks (#31)
+
 Scripts are now processed in chunks to limit the size of the command passed to
 nwnsc. You can change the size of these chunks with the new `--nssChunks`
 setting.
 
 ### `installDir` path expansion (#15)
+
 Tildes and environment variables are now interpreted correctly in the `install`
 and `unpack` commands.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.3...0.11.4
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.3...0.11.4>
 
 ## 0.11.3: May 15, 2020
 
@@ -1052,7 +1055,7 @@ and may only have alphanumeric and underscores.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.2...0.11.3
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.2...0.11.3>
 
 ## 0.11.2: May 11, 2020
 
@@ -1105,8 +1108,7 @@ exclude rules.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.1...0.11.2
-
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.1...0.11.2>
 
 ## 0.11.1: April 16, 2020
 
@@ -1120,11 +1122,12 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.1...0.11.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.11.0...0.11.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.11.0...0.11.1>
 
 ## 0.11.0: April 5, 2020
 
 ### tlk support
+
 Build targets can now handle tlk files. These will be installed in the
 `$installDir/tlk` directory. They are converted to json like gff files. This
 feature requires that you have `nwn_tlk` installed (which comes with the
@@ -1147,11 +1150,13 @@ include = "src/**/mycustomtlk.tlk.json"
 ```
 
 Three new flags have been added:
+
 - `tlkUtil`: the binary used to convert tlk files (default: `nwn_tlk`)
 - `tlkFlags`: additional flags to pass to `nwn_tlk` (default: )
 - `tlkFormat`: the format used to store tlk files (default: `json`)
 
 ### Minor changes
+
 - Added a prompt to continue installing or launching a file when choosing not
   to overwrite an existing file.
 - The `play`, `test`, and `serve` commands no longer error out when supplied
@@ -1163,13 +1168,15 @@ Three new flags have been added:
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.10.2...0.11.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.10.2...0.11.0>
 
 ## 0.10.2: April 2, 2020
+
 This is a small bugfix release that forces source filenames to be all lowercase.
 This was an issue because modules unpacked from a directory may have uppercase
 filenames or extensions. On case-sensitive OSes, this caused some files to be
 duplicated or not detected at all.
+
 - If you have files in your source tree with uppercase filenames, run `nasher
   pack all` (no need to install) to rename the files and update the cache.
   Things should work correctly next time you unpack.
@@ -1177,7 +1184,7 @@ duplicated or not detected at all.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.10.1...0.10.2
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.10.1...0.10.2>
 
 ## 0.10.1: March 19, 2020
 
@@ -1186,7 +1193,7 @@ unpacking.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.10.0...0.10.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.10.0...0.10.1>
 
 ## 0.10.0: March 17, 2020
 
@@ -1208,24 +1215,26 @@ file is overwritten.
 
 Note that you can still manually specify a file to unpack:
 
-    $ nasher unpack demo demo.mod # or...
-    $ nasher unpack --file:demo.mod
+    nasher unpack demo demo.mod # or...
+    nasher unpack --file:demo.mod
 
 ### Support for NWN:EE module folders
 
 NWN:EE added module folders. These are subdirectories of the modules folder
 that contain unpacked modules. They can be loaded in the toolset just like a
 packed module. The new `--useModuleFolder` flag enables this feature.
+
 - default when installing: `true`
 - default when unpacking: `false` if explicitly given a file; else `true`
 
 You can disable this setting with `nasher config`:
 
-    $ nasher config useModuleFolder false
+    nasher config useModuleFolder false
 
 ### Launch modules with nasher
 
 This update added three commands:
+
 - `play`: runs the `convert -> install` loop for a module target, then launches
   the module in-game
 - `test`: as `play`, but launches in testing mode, selecting the first PC in
@@ -1237,8 +1246,8 @@ locations for your OS. If it cannot find them, you can use new `--gameBin` and
 `--serverBin` flags to point to them. These settings can be made permanent with
 `nasher config`:
 
-    $ nasher config gameBin /opt/nwn/nwmain-linux
-    $ nasher config serverBin /opt/nwn/nwserver-linux
+    nasher config gameBin /opt/nwn/nwmain-linux
+    nasher config serverBin /opt/nwn/nwserver-linux
 
 ### Minor changes
 
@@ -1251,7 +1260,7 @@ locations for your OS. If it cannot find them, you can use new `--gameBin` and
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.6...0.10.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.6...0.10.0>
 
 ## 0.9.6: February 19, 2020
 
@@ -1269,13 +1278,14 @@ place everything else into `src`:
 ```
 
 ### Version stripped from areas when unpacking
+
 The area version is a useless field that updates whenever the area is saved in
 the toolset, regardless of whether anything has changed. Removing this field
 keeps area files from updating unnecessarily.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.5...0.9.6
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.5...0.9.6>
 
 ## 0.9.5: January 06, 2020
 
@@ -1294,20 +1304,23 @@ since the last unpack and let the builder choose which file to keep when a
 conflict is found.
 
 ### Minor changes
+
 - Improved compilation speed with large numbers of scripts
 - Improved docker documentation
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.4...0.9.5
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.4...0.9.5>
 
 ## 0.9.4: November 06, 2019
 
 ### Add docker support
+
 If you don't want to be bothered installing nim and `nwnsc`, you can run nasher
 as a docker image. Refer to the readme for details.
 
 ### Minor changes
+
 - nasher now checks to see if `nwnsc` and the `nwn_*` binaries are present
   before running and presents a helpful error message if not.
 - Removed unused imports that caused warnings during installation
@@ -1321,7 +1334,7 @@ as a docker image. Refer to the readme for details.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.3...0.9.4
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.3...0.9.4>
 
 ## 0.9.3: October 29, 2019
 
@@ -1334,7 +1347,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.3...0.9.4
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.2...0.9.3
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.2...0.9.3>
 
 ## 0.9.2: October 21, 2019
 
@@ -1342,7 +1355,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.2...0.9.3
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.1...0.9.2
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.1...0.9.2>
 
 ## 0.9.1: October 14, 2019
 
@@ -1350,7 +1363,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.1...0.9.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.0...0.9.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.9.0...0.9.1>
 
 ## 0.9.0: October 13, 2019
 
@@ -1363,7 +1376,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.9.0...0.9.1
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.4...0.9.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.8.4...0.9.0>
 
 ## 0.8.4: October 13, 2019
 
@@ -1371,7 +1384,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.4...0.9.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.3...0.8.4
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.8.3...0.8.4>
 
 ## 0.8.3: October 12, 2019
 
@@ -1379,7 +1392,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.3...0.8.4
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.2...0.8.3
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.8.2...0.8.3>
 
 ## 0.8.2: September 07, 2019
 
@@ -1387,7 +1400,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.2...0.8.3
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.1...0.8.2
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.8.1...0.8.2>
 
 ## 0.8.1: September 07, 2019
 
@@ -1396,7 +1409,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.1...0.8.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.0...0.8.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.8.0...0.8.1>
 
 ## 0.8.0: September 06, 2019
 
@@ -1405,7 +1418,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.8.0...0.8.1
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.3...0.8.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.7.3...0.8.0>
 
 ## 0.7.3: September 06, 2019
 
@@ -1413,7 +1426,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.3...0.8.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.2...0.7.3
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.7.2...0.7.3>
 
 ## 0.7.2: August 24, 2019
 
@@ -1423,7 +1436,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.2...0.7.3
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.1...0.7.2
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.7.1...0.7.2>
 
 ## 0.7.1: August 24, 2019
 
@@ -1434,7 +1447,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.1...0.7.2
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.0...0.7.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.7.0...0.7.1>
 
 ## 0.7.0: July 31, 2019
 
@@ -1444,7 +1457,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.7.0...0.7.1
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.6.1...0.7.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.6.1...0.7.0>
 
 ## 0.6.1: July 29, 2019
 
@@ -1452,22 +1465,22 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.6.1...0.7.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.6.0...0.6.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.6.0...0.6.1>
 
 ## 0.6.0: July 28, 2019
 
 - `neverwinter.nim` utilities are now invoked as external tools. The following
   flags have been added:
-    - `erfUtil`: the utility used to pack and unpack erf files
-    - `erfFlags`: user-defined flags to pass to the erf utility
-    - `gffUtil`: the utility used to convert gff files to/from json
-    - `gffFlags`: user-defined flags to pass to the gff utility
-    - `gffFormat`: the format in which to store gff files (currently supports
+  - `erfUtil`: the utility used to pack and unpack erf files
+  - `erfFlags`: user-defined flags to pass to the erf utility
+  - `gffUtil`: the utility used to convert gff files to/from json
+  - `gffFlags`: user-defined flags to pass to the gff utility
+  - `gffFormat`: the format in which to store gff files (currently supports
       json only)
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.5.0...0.6.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.5.0...0.6.0>
 
 ## 0.5.0: July 27, 2019
 
@@ -1478,7 +1491,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.5.0...0.6.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.4.1...0.5.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.4.1...0.5.0>
 
 ## 0.4.1: July 24, 2019
 
@@ -1491,7 +1504,7 @@ files it wants.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.4.0...0.4.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.4.0...0.4.1>
 
 ## 0.4.0: July 20, 2019
 
@@ -1503,7 +1516,7 @@ package repository.
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.3.0...0.4.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.3.0...0.4.0>
 
 ## 0.3.0: July 19, 2019
 
@@ -1511,11 +1524,11 @@ This version brings a large-scale code refactor that will improve the speed and
 simplicity of further development. The user-facing changes are listed below:
 
 - Configuration options now come from two sources:
-    - First, `$XDG_CONFIG_HOME/nasher/user.cfg` is loaded. Any option set here
+  - First, `$XDG_CONFIG_HOME/nasher/user.cfg` is loaded. Any option set here
       is added to the options table. These can represent user-defined defaults
       that override system defaults. Further documentation on these options
       will come soon.
-    - Second, the command-line parameters are parsed. Other than commands, any
+  - Second, the command-line parameters are parsed. Other than commands, any
       parameters passed are added to the table. Positional arguments are
       converted to the appropriate option. These override user defaults.
 - The files used to build each target are now cached. Only files that have
@@ -1538,7 +1551,7 @@ simplicity of further development. The user-facing changes are listed below:
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.2.1...0.3.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.2.1...0.3.0>
 
 ## 0.2.1: July 13, 2019
 
@@ -1546,7 +1559,7 @@ Details: https://github.com/squattingmonk/nasher.nim/compare/0.2.1...0.3.0
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.2.0...0.2.1
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.2.0...0.2.1>
 
 ## 0.2.0: July 12, 2019
 
@@ -1572,8 +1585,9 @@ directory or into `src/$ext/`, where `$ext` is the file extension. It will also
 allow the user to add custom rules.
 
 ### Minor changes
+
 - The default email is only default for the first author of a package
 
 ---
 
-Details: https://github.com/squattingmonk/nasher.nim/compare/0.1.0...0.2.0
+Details: <https://github.com/squattingmonk/nasher.nim/compare/0.1.0...0.2.0>
